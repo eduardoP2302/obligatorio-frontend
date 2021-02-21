@@ -34,8 +34,7 @@ const Login = ({ history }) => {
         } else {
           sessionStorage.setItem('token', res.token);
           sessionStorage.setItem('loggedInUser', JSON.stringify(res));
-          // para recuperarlo --> const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
-          history.push('/tareas');
+          history.push('/dashboard');
         }
       })
       .catch(res => console.log('error... :-(', res));
